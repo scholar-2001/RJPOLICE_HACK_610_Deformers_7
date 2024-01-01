@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    overflow: hidden;
+    height: 100vh;
+    width: 15rem;
+    background: linear-gradient(#2521a5,#d51b0a);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.maincontainer{
+    display: flex;
+}
+.routes{
+    margin-right: 1rem;
+}
+.link{
+    display: flex;
+    color: rgb(255, 255, 255);
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 0.313rem 0.625rem;
+    
+}
+a{
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.sidebar h3{
+    font-size: 1.6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+}
+.routes :hover{
+    background-color: rgb(184, 176, 176);
+    transition: 0.2s ease-in-out;
+    border-radius: 0.313rem;
+}
+.title {
+  font-size: 2rem;
+}
+.title .container .box1 , .box2 , .box3{
+    height: 15rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+.title .container{
+margin-top: 4.5rem;
+margin-left: 8rem;
+display: grid;
+grid-template-columns: 10rem 10rem;
+gap: 2rem 5.5rem;
+}
+.title .container .box1{
+    grid-column: 1/4;
+}
+.title .container .box2{
+    grid-column: 1/4;
+}
+.title .container .box3{
+    height: 32rem;
+    grid-column: 4/9;
+    grid-row: 1/3;
+}
