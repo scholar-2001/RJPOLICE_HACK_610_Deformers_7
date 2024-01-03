@@ -44,13 +44,13 @@ def login():
     password=request.json.get('password')
     authenticate_user=authenticated_user(name,password)
     if authenticate_user:
-        return redirect(url_for('sidebar.jsx'))
+        return redirect(url_for('crm_portal'))
     else:
         return jsonify({'error': 'Authentication failed'}), 401
 
 @app.route('/portal')
 def crm_portal():
-    return render_template('sidebar.jsx')
+    return render_template('index.html')
 
 if __name__=="__main__":
     app.run(debug=True)
