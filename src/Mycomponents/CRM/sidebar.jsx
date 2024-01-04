@@ -36,7 +36,7 @@ const Sidebar = ({ children }) => {
         <section className="routes">
             {routes.map((route) =>
             (
-              <NavLink to={route.path} key={route.name} className='link'>
+              <NavLink to={route.path} key={route.name} className='link' exact>
                 <div className="icon">{route.icon}</div>
                 <div className="link_name">{route.name}</div>
               </NavLink>

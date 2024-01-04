@@ -1,37 +1,60 @@
-import React from 'react'
-import './authentication.css';
-import password_icon from '../assets/password.png'
-import user_icon from '../assets/person.png'
-import ReCAPTCHA from "react-google-recaptcha";
-const authentication = () => {
-  const onChange=()=>{};
-  return (
-    
-    <div className='container'>
-       <div className="header">
+  import { useNavigate } from 'react-router-dom';
+  import { useState } from 'react';
+  import axios from 'axios';
+  import React from 'react'
+  import './authentication.css';
+  import password_icon from '../assets/password.png'
+  import user_icon from '../assets/person.png'
+  import ReCAPTCHA from "react-google-recaptcha";
+  const Authentication = () => {
+    const navigate = useNavigate();
+    const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+    const onChange=()=>{};
+    const handleAuthentication = async () => {
+      try {
+        const response = await axios.post('http://your-flask-api/login', {
+          name,
+          password,
+        });
+  
+        if (response.status === 200) {
+          // Authentication successful, redirect to CRM portal
+          console.log('Authentication successful');
+          navigate('/'); // Update the path as needed
+        } else {
+          // Handle authentication failure
+          console.error('Authentication failed');
+        }
+      } catch (error) {
+        console.error('Error during authentication:', error);
+      }
+    };
+    return (
+     <div className="container">
+      <div className="header">
         <div className="text">Welcome Rajasthan Police</div>
-       </div>
-       <div className="inputs">
+      </div>
+      <div className="inputs">
         <div className="input">
           <img src={user_icon} alt="" />
-          <input type="text" placeholder='Name'/>
+          <input type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="input">
           <img src={password_icon} alt="" />
-          <input type="password" placeholder='Password'/>
+          <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
         </div>
         <div className="capcha">
-        <ReCAPTCHA
-        sitekey="6Lfw2T0pAAAAAIaYv9PUcTqkUfewW7ZMwSvAhWb0"
-        onChange={onChange}
-        />
+          <ReCAPTCHA sitekey="6Lfw2T0pAAAAAIaYv9PUcTqkUfewW7ZMwSvAhWb0" onChange={onChange} />
         </div>
-       </div>
-       <div className="submit-container">
-        <button className='submit'>Submit</button>
-       </div>
+      </div>
+      <div className="submit-container">
+        <button className="submit" onClick={handleAuthentication}>
+          Submit
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default authentication
+  export default Authentication

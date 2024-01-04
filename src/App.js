@@ -1,4 +1,5 @@
-// import Authentication from './Mycomponents/Authentication/authentication';
+
+import Authentication from './Mycomponents/Authentication/authentication';
 import Sidebar from './Mycomponents/CRM/sidebar';
 import Dashboard from "./Mycomponents/pages/dashboard";
 import Consumer_data from "./Mycomponents/pages/consumer_data";
@@ -7,21 +8,45 @@ import Real_time_logs from "./Mycomponents/pages/real_time_logs";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
-  //  <div>
-  //     {/* <Authentication /> */}
-  //  </div>
+  
   <>
   <Router>
-      <Sidebar>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/consumer_data" element={<Consumer_data />} />
-          <Route path="/fraud_alert" element={<Fraud_alert />} />
-          <Route path="/real_time_logs" element={<Real_time_logs />} />
-
-          <Route path="*" element={<> not found</>} />
+        <Route path="/" element={<Authentication />} />
+        <Route
+          path="/dashboard"
+          element={
+            <Sidebar>
+              <Dashboard />
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/consumer_data"
+          element={
+            <Sidebar>
+              <Consumer_data />
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/fraud_alert"
+          element={
+            <Sidebar>
+              <Fraud_alert />
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/real_time_logs"
+          element={
+            <Sidebar>
+              <Real_time_logs />
+            </Sidebar>
+          }
+        />
+        <Route path="*" element={<> not found</>} />
         </Routes>
-      </Sidebar>
     </Router>
   </>
    

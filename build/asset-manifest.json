@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.58f98a9f.css",
+    "main.js": "/static/js/main.c0dc36a7.js",
+    "static/js/787.3f726777.chunk.js": "/static/js/787.3f726777.chunk.js",
+    "static/media/Rajasthan_Police_Logo.png": "/static/media/Rajasthan_Police_Logo.f1b34f9017022a3cc573.png",
+    "index.html": "/index.html",
+    "main.58f98a9f.css.map": "/static/css/main.58f98a9f.css.map",
+    "main.c0dc36a7.js.map": "/static/js/main.c0dc36a7.js.map",
+    "787.3f726777.chunk.js.map": "/static/js/787.3f726777.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58f98a9f.css",
+    "static/js/main.c0dc36a7.js"
+  ]
+}
