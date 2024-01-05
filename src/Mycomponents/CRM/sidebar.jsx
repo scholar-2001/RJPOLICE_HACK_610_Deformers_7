@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 const routes = [
     {
-        path: "/",
+        path: "/dashboard",
         name: "Dashboard",
         icon: <HomeRoundedIcon />,
     },

@@ -1,6 +1,7 @@
 body{
     height: 100vh;
-    background: linear-gradient(#2A00B7,#510283);
+    /* background: linear-gradient(#2A00B7,#510283); */
+    background: linear-gradient(white,rgb(207, 247, 236),purple);
 }
 .container{
     overflow: hidden;

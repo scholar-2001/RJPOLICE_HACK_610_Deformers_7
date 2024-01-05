@@ -13,21 +13,22 @@
     const onChange=()=>{};
     const handleAuthentication = async () => {
       try {
-        const response = await axios.post('http://your-flask-api/login', {
-          name,
-          password,
-        });
+        const response = await axios.post('http://127.0.0.1:5001/login', {
+        name: name,
+        password: password,
+        },{ withCredentials: true });
+
   
         if (response.status === 200) {
           // Authentication successful, redirect to CRM portal
           console.log('Authentication successful');
-          navigate('/'); // Update the path as needed
+          navigate('/dashboard'); // Update the path as needed
         } else {
           // Handle authentication failure
           console.error('Authentication failed');
         }
       } catch (error) {
-        console.error('Error during authentication:', error);
+        console.error('authentication failed:', error);
       }
     };
     return (
@@ -35,6 +36,7 @@
       <div className="header">
         <div className="text">Welcome Rajasthan Police</div>
       </div>
+     
       <div className="inputs">
         <div className="input">
           <img src={user_icon} alt="" />
