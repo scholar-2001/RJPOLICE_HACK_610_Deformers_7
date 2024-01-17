@@ -14,7 +14,7 @@ const routes = [
     },
     {
         path: "/consumer_data",
-        name: "Consumer Data",
+        name: "Customer Data",
         icon: <SearchRoundedIcon />,
     },
     {

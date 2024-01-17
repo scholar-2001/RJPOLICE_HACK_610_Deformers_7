@@ -1,3 +1,5 @@
+// FraudTable.jsx
+
 import React, { useState, useEffect } from 'react';
 
 const FraudTable = () => {
@@ -76,3 +78,38 @@ const FraudTable = () => {
 };
 
 export default FraudTable;
+
+
+STYLING
+.fraud-table-container {
+    height:655px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: antiquewhite;
+  }
+  
+  .fraud-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .fraud-table th,
+  .fraud-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  .fraud-table th {
+    background: #f2f2f2;
+    border-right: 1px solid #ddd;
+  }
+  
+  .fraud-table td {
+    border-right: 1px solid #ddd;
+  }
+  
+  .fraud-table th:last-child,
+  .fraud-table td:last-child {
+    border-right: none;
+  }

@@ -1,13 +1,26 @@
-import police from '../assets/Rajasthan_Police_Logo.png'
-const dashboard = () => {
-  return <div className="title">
-    Dashboard
-    <div className="container">
-      <div className="box1">Customer Data</div>
-      <div className="box2">Recent-alerts</div>
-      <div className="box3">Real-Time Logs</div>
+import React from "react";
+
+const DashBoard = () => {
+  return (
+    <div className="dashboard">
+      <div className="dash-container">
+        <div className="dash-content">
+          <div>WELCOME RAJASTHAN POLICE</div>
+          <div>WELCOME RAJASTHAN POLICE</div>
+        </div>
+      </div>
+      <div className="container">
+      <div className="box1">
+        <div className="fraud_numbers"></div>
+        <div className="category_numbers"></div>
+        <div className="states_numbers"></div>
+        <div className="amount_numbers"></div>
+      </div>
+      <div className="box2">Line Chart</div>
+      <div className="box3">Map</div>
     </div>
-  </div>;
+    </div>
+  );
 };
 
-export default dashboard;
+export default DashBoard;
